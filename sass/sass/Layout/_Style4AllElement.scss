@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    // transition: all .25s linear !important;
+}
+
+#body>section {
+    padding-top: 68px !important;
+    overflow-x: hidden;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: white;
+}

@@ -1,0 +1,26 @@
+/* ******************* */
+/*        Footer       */
+/* ******************* */
+
+footer {
+    background: black;
+    padding: 15px;
+
+    div {
+        color: white;
+        text-align: center;
+        font-size: 16px;
+
+        span a {
+    
+            color: $green !important;
+            @extend .hvr-underline-from-center;
+            width: fit-content;
+            margin-top: 8px;
+            @media screen and (min-width:768px) {
+                margin-top: 0px;
+                top: -2px;
+            }
+        }
+    }
+}

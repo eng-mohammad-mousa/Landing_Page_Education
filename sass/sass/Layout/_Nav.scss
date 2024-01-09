@@ -1,0 +1,47 @@
+nav{
+    font-weight: bold;
+    transform:translateY(-100%); 
+    transition: .35s all linear !important;
+    // box-shadow: 1px -1px 3px $green inset , 
+    //                 1px -1px 3px $black inset;
+    border-bottom: 2px solid rgba(black,0.5);
+    opacity: 0;
+    .navbar-brand{
+
+
+
+        font-weight:900;
+        font-style: italic;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:$green !important;
+        font-style: italic;
+        font-weight:bold; 
+        transition: .2s all linear;
+        &:hover{
+            transform: scale(1.03)
+        }   
+        
+    }
+    
+    .navbar-toggler {
+        color: $green !important;
+        border-color:transparent !important;
+        &:focus{
+            box-shadow: initial !important;
+        }
+    }
+
+    .navbar-collapse{
+        text-align: center;
+        li a{
+        &:hover{
+            color:$green !important;
+        }
+    }
+    }
+    
+}
+
+

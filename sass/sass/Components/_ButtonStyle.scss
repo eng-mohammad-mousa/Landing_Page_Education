@@ -1,0 +1,17 @@
+%buttonS {
+    padding: 5px 15px;
+    border-radius: 25px;
+    background-color: $green;
+    color: white;
+    box-shadow: none;
+    border: none;
+    transition: .2s all linear;
+
+    &:hover {
+        background-color: $black;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

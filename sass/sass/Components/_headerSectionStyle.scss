@@ -1,0 +1,19 @@
+%headerSS{
+    font-weight:bold;
+    color:$green;
+    text-align: center !important;
+    margin-bottom:30px;
+    position: relative;
+    width:fit-content;
+    margin-top:5px;
+    &::after{
+        content:"";
+        background-color:$black;
+        width:60%;
+        height:2px;
+        position: absolute;
+        bottom:-10px;
+        left:50%;
+        transform: translateX(-50%)
+    }
+}

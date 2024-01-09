@@ -1,0 +1,35 @@
+.up-arrow {
+    border: 5px solid $green;
+    position: fixed;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: .35s all linear !important;
+    background-color: black;
+    @include box-shadow(1px, 3px, black);
+    @extend .hvr-outline-in;
+
+
+    bottom: 30px;
+    right: 20px;
+
+    @media screen and (min-width:768px) {
+        bottom: 30px;
+        right: 25px;
+    }
+
+    transform: translateX(200%);
+    opacity:0;
+
+    svg {
+        height: 25px;
+        width: 25px;
+
+        @media screen and (min-width:768px) {
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+
+}

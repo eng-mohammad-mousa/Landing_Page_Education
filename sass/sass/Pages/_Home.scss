@@ -1,0 +1,467 @@
+@keyframes background {
+
+    0%,
+    100% {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph2.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+    }
+
+    20% {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph3.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+    }
+
+    36% {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph5.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+    }
+
+    52% {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph0.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+    }
+
+    68% {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph1.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+    }
+
+    84% {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph6.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+    }
+}
+
+.home {
+    height: 100vh;
+    background: url(../img/header-backgorund/ph-md.png),
+        linear-gradient(rgba(29, 18, 18, 0.85), rgba(0, 0, 0, 0.85));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    animation-name: none;
+
+    @media screen and (min-width:768px) {
+        background: linear-gradient(76.34deg, #fff 52.4%, rgba(white, 0) 52.6%), url(../img/header-backgorund/ph3.jpg) no-repeat;
+        background-size: cover, auto 100%;
+        background-position: right;
+        background-attachment: fixed;
+        background-blend-mode: initial;
+
+        animation-name: none;
+
+    }
+
+    @media screen and (min-width:992px) {
+        animation-name: background;
+        animation-duration: 24s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+
+    }
+
+
+    .content {
+        position: relative;
+
+        h1,
+        h2 {
+            color: $green;
+            font-weight: 900;
+            // @include text-shadow(.3px , .3px , $grey )
+        }
+
+        h3 {
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: white !important;
+
+            @media screen and (min-width:768px) {
+                color: black !important;
+            }
+        }
+
+        button {
+            @extend %buttonS;
+            @extend .hvr-forward;
+        }
+
+        .icon {
+            position: absolute;
+            bottom: -80%;
+            display: flex;
+
+            @media screen and (max-width:767px) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            a {
+                transition: all .25s linear !important;
+                text-decoration: none;
+                color: white !important;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 50%;
+                background-color: $green;
+
+                &:not(:last-of-type) {
+                    margin-right: 5px;
+                }
+
+                &:hover {
+                    background-color: $black;
+                    transform: rotateZ(360deg)
+                }
+            }
+        }
+    }
+}
+
+// Section Course
+.course {
+    h2 {
+        @extend %headerSS;
+
+    }
+
+    .box-container {
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        text-align: center;
+
+        @media screen and (min-width:768px) {
+            justify-content: space-between;
+        }
+
+        .box {
+            &>* {
+                transition: all .25s linear !important;
+            }
+
+            @include box-shadow(1px, 3px, $grey);
+            border-radius: 15px;
+            text-align: center !important;
+            margin:20px 0px;
+            height:250px;
+            padding:0px 20px;
+            cursor: pointer;
+            position: relative;
+            overflow:hidden;
+
+            width:90%;
+
+            @media screen and (min-width:768px) {
+                width: 48%;
+                justify-content: space-between;
+            }
+
+            @media screen and (min-width:992px) {
+                width: 30%;
+            }
+
+            p {
+                opacity: 0;
+                transform: translateY(300%);
+                color: black;
+            }
+
+            svg {
+                $v2: 150px;
+                display: block;
+                margin: 50px auto;
+                width: $v2;
+                height: $v2;
+            }
+
+            transition-property: transform,
+            opacity;
+
+            &:hover {
+                background-color: $black;
+
+                p {
+                    opacity: 1;
+                    transform: translateY(0%);
+                    color: white;
+                }
+
+                svg {
+                    $v1: 65px;
+                    display: block;
+                    margin: 20px auto;
+                    width: $v1;
+                    height: $v1;
+                }
+            }
+
+        }
+    }
+}
+
+// Section Service
+.service {
+    background: url("../img/section-background/ser.jpg"), linear-gradient(to bottom, rgba(0, 0, 0, .95), rgba(0, 0, 0, 0.8));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    .container>h2 {
+        @extend %headerSS;
+
+        &::after {
+            background-color: white !important;
+        }
+
+    }
+
+    .item-container {
+        width: 100%;
+        display: initial;
+
+        .item {
+            background-color: white;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 5px 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            margin: 20px 0px;
+            transition: all .25s linear !important;
+
+            &:hover {
+                transform: scale(1.03)
+            }
+
+            ;
+
+            h2 {
+                color: $green;
+            }
+
+            svg {
+                $v3: 70px;
+                width: $v3;
+                height: $v3;
+                margin: 0px 20px;
+            }
+
+
+            @media screen and (max-width:575px) {
+                margin: 20px auto;
+                flex-direction: column;
+                text-align: center;
+
+                svg,
+                h2,
+                p {
+                    margin: 8px auto;
+                }
+            }
+
+            ;
+
+            @media screen and (min-width:576px) {
+                flex-direction: row;
+                max-width: 600px;
+
+                div {
+                    max-width: 600px;
+                    padding-left: 20px;
+                    border-left: 3px solid $green;
+                }
+            }
+
+            ;
+        }
+    }
+}
+
+// Section testimonials
+.testimonials {
+    background-color: black;
+
+    h2 {
+        @extend %headerSS;
+
+        &::after {
+            background-color: white
+        }
+    }
+
+    .opinion-container {
+        width: 100%;
+
+        .opinion {
+            @extend .hvr-wobble-bottom;
+            max-width: 600px;
+            margin: 20px 0px;
+            background-color: white;
+            position: relative;
+            border-radius: 5px;
+
+            @media screen and (min-width:768px) {
+                margin-left: 40px;
+            }
+
+            img {
+                $v4: 75px;
+                width: $v4;
+                height: $v4;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid $green;
+
+                position: absolute;
+
+                @media screen and (max-width:767px) {
+                    top: calc(-75px/2);
+                    left: 50%;
+                    transform: translateX(-50%)
+                }
+
+                @media screen and (min-width:768px) {
+                    left: calc(-75px/2);
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+
+            }
+
+            div {
+                h5 {
+                    color: $green;
+                }
+
+                ;
+                padding:10px 15px;
+
+                @media screen and (max-width:767px) {
+                    text-align: center;
+                    padding-top: 40px;
+                    margin-top: 50px;
+                    margin: 50px auto;
+                }
+
+                @media screen and (min-width:768px) {
+                    h5 {
+                        text-align: end;
+                    }
+
+                    padding-left:65px;
+                }
+            }
+        }
+    }
+}
+
+// Section Contact
+
+.contact {
+    overflow: hidden;
+
+    background: url("../img/section-background/secon.jpg"),
+        linear-gradient(to bottom, rgba(0, 0, 0, .85) 2%,
+            rgba(0, 1, 1, 0.8) 99%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+
+    * {
+        transition: all .25s linear !important;
+    }
+
+    h2 {
+        @extend %headerSS;
+
+        &::after {
+            background-color: white !important;
+        }
+
+    }
+
+    form {
+        padding: 00px 0px 50px;
+        transition: all .25s linear !important;
+    }
+
+    .form-control {
+        color: rgb(153, 141, 141) !important;
+        background-color: rgba(1, 1, 1, 0.45);
+
+        &:focus {
+            background-color: rgba(1, 1, 1, 0.75);
+            border-color: $green;
+            outline: 0;
+            box-shadow: 0px 0px 1px 0rem $green;
+        }
+
+        &::placeholder {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+    .form-label {
+        color: white;
+        position: relative;
+        transform: translateY(155%);
+        margin-left: 10px;
+
+    }
+
+    button {
+        @extend %buttonS;
+        @extend .hvr-grow-shadow;
+        width: 150px;
+        height: 40px;
+
+        &:hover {
+            background: white;
+            color: black;
+        }
+    }
+
+    .website a {
+        position: relative;
+        @extend .hvr-float-shadow;
+    }
+
+}

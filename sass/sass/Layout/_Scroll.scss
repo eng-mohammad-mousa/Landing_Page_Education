@@ -1,0 +1,28 @@
+$bk-scroll : $black;
+
+// For Fire Fox 
+* , :root{
+	scrollbar-color: $green $bk-scroll;
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar{
+	width:8px;
+	height:8px;
+}
+::-webkit-scrollbar-track{
+	background-color: $bk-scroll;
+}
+::-webkit-scrollbar-thumb{
+	height:15px;
+	background-color:$green;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	background-clip: padding-box; 
+}
+::-webkit-scrollbar-thumb:hover {
+	background:rgba($green , 0.75);
+    border: 1px solid transparent;
+	border-radius: 10px;
+	background-clip: padding-box; 
+} 
