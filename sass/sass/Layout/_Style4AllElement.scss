@@ -10,7 +10,18 @@
     overflow-x: hidden;
 }
 
+.form-control.is-valid,
+.was-validated .form-control:valid,
+
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
     border-color: white;
+}
+
+
+
+::selection {
+    color: white;
+    background: $green;
+    padding: 10px;
 }
